@@ -11,9 +11,14 @@ const Squares = ({ squareArr }) => {
         let num = index + 1;
         const whichRow = Math.ceil(num / size);
         console.log(whichRow);
-
-        if (whichRow % 2) {
-          oddRow = true;
+        if (size % 2) {
+          if (whichRow % 1) {
+            oddRow = true;
+          }
+        } else {
+          if (whichRow % 2) {
+            oddRow = true;
+          }
         }
         return <Square key={index} odd={index % 2} oddRow={oddRow} />;
       })}
