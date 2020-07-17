@@ -3,7 +3,7 @@ import './App.css';
 import Baord from './components/Board';
 
 function App() {
-  const [boardSize, setBoardSize] = useState(3);
+  const [boardSize, setBoardSize] = useState(8);
   const handleChange = (e) => {
     //must set  check the  value must number
     setBoardSize(e.target.value);
