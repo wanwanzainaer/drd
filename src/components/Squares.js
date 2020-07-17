@@ -10,7 +10,6 @@ const Squares = ({ squareArr }) => {
         let oddRow = false;
         let num = index + 1;
         const whichRow = Math.ceil(num / size);
-        console.log(whichRow);
         if (size % 2) {
           if (whichRow % 1) {
             oddRow = true;
