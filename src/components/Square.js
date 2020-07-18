@@ -5,14 +5,14 @@ const Square = ({ odd, oddRow, circularPiece }) => {
   let color;
 
   if (oddRow) {
-    color = 'black';
+    color = 'blue';
     if (odd) {
       color = 'white';
     }
   } else {
     color = 'white';
     if (odd) {
-      color = 'black';
+      color = 'blue';
     }
   }
   const content = circularPiece ? <Chess color={circularPiece} /> : null;

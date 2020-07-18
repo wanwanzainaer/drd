@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 import Baord from './components/Board';
 
 function App() {
