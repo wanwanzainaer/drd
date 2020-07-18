@@ -19,7 +19,20 @@ const Squares = ({ squareArr }) => {
             oddRow = true;
           }
         }
-        return <Square key={index} odd={index % 2} oddRow={oddRow} />;
+        let circularPiece;
+        if (whichRow <= 2) {
+          circularPiece = 'red';
+        } else if (whichRow > size - 2) {
+          circularPiece = 'black';
+        }
+        return (
+          <Square
+            key={index}
+            odd={index % 2}
+            oddRow={oddRow}
+            circularPiece={circularPiece}
+          />
+        );
       })}
     </>
   );

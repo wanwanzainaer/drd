@@ -1,20 +1,21 @@
 import React from 'react';
+import Chess from './Chees';
 
-const Square = ({ odd, oddRow }) => {
+const Square = ({ odd, oddRow, circularPiece }) => {
   let color;
 
   if (oddRow) {
-    color = 'black';
+    color = 'blue';
     if (odd) {
       color = 'white';
     }
   } else {
     color = 'white';
     if (odd) {
-      color = 'black';
+      color = 'blue';
     }
   }
-
+  const content = circularPiece ? <Chess color={circularPiece} /> : null;
   const style = {
     background: 'lightblue',
     border: '2px solid darkblue',
@@ -25,7 +26,7 @@ const Square = ({ odd, oddRow }) => {
     backgroundColor: `${color}`,
   };
 
-  return <button style={style}></button>;
+  return <button style={style}>{content}</button>;
 };
 
 export default Square;
